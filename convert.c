@@ -41,6 +41,8 @@ int main(int argc, char **argv) {
 	while (!feof(input)) {
 		char tmp[1024];
 		fscanf(input,"%[^\n]\n",tmp);
+		if (tmp[strlen(tmp)-1]=='\n' || tmp[strlen(tmp)-1]=='\r')
+			tmp[strlen(tmp)-1]='\0';
 		if (!strlen(tmp)) {
 			fprintf(stderr,"Error: The input file contains an empty line.\n"
 					"That's not a file made by ArithmeticExpressionCompiler \"calc\",\n"
