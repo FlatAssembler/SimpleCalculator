@@ -67,6 +67,8 @@ int main(int argc, char **argv) {
 	}
 	fwrite(new,sizeof(char),strlen(new),file);
 	fclose(file);
+	free(old);
+	free(new);
 	return 0;
 }
 
