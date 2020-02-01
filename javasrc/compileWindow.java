@@ -135,9 +135,9 @@ public class compileWindow extends javax.swing.JFrame {
             assembler=newAssembler;
             jTextPane1.setText(("<html><pre>"+
                     "<span style=\"color:#777777\">;Compile using FlatAssembler.<br/>"+
-                    ";See http://flatassembler.000webhostapp.com/compiler.html for more info.<br/>"+
+                    ";See https://flatassembler.github.io/compiler.html for more info.<br/>"+
                     ";If you want to include the Assembly into a C program,<br/>;I'd suggest you to also read:<br/>"+
-                    ";http://flatassembler.000webhostapp.com/quadratic.c</span><br/>"+
+                    ";https://flatassembler.github.io/quadratic.c</span><br/>"+
                     assembler+"</pre></html>").replaceAll("<br/>", "\n"));
         }
         catch (RhinoException exception) {
