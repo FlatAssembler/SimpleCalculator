@@ -28,6 +28,8 @@ public class ShowTheLicense extends javax.swing.JFrame {
 
         textArea1 = new java.awt.TextArea();
 
+        setTitle("Mozilla Public Licence");
+
         textArea1.setBackground(java.awt.Color.white);
         textArea1.setEditable(false);
         textArea1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
