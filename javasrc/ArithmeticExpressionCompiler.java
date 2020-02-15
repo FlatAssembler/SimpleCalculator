@@ -70,7 +70,6 @@ public class ArithmeticExpressionCompiler extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Courier New", 0, 15)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText(";AEC is a simplified programming language made by Teo Samarzija.\n;You can find some example AEC programs, together with the\n;32-bit Windows executables, here:\n;https://github.com/FlatAssembler/ArithmeticExpressionCompiler/blob/master/ArithmeticExpressionCompiler.zip?raw=true\nn:=20\ni:=0\nWhile i<n | i=n\n\tIf i=0\n\t\tfib(i):=0\n\tElseIf i=1\n\t\tfib(i):=1\n\tElse\n\t\tfib(i):=fib(i-1)+fib(i-2)\n\tEndIf\n\ti:=i+1\nEndWhile\nfib(n) ;Store the n-th Fibonacci number into \"result\".\n;If you now click \"Convert AEC to Assembly\", you should get\n;an Assembly code that fills the first 20 fields of the array\n;named \"fib\" with the respective Fibonacci numbers. And you should\n;be able to compile that code by embedding it into a program\n;that can be compiled with FlatAssembler (and, of course, declaring\n;the variables and the array in Assembly).\n;An example of such a FlatAssembler program is available here:\n;https://flatassembler.github.io/test.ASM");
-        jTextArea1.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Convert AEC to Assembly");

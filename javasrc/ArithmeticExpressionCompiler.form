@@ -80,7 +80,6 @@
             </Property>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value=";AEC is a simplified programming language made by Teo Samarzija.&#xa;;You can find some example AEC programs, together with the&#xa;;32-bit Windows executables, here:&#xa;;https://github.com/FlatAssembler/ArithmeticExpressionCompiler/blob/master/ArithmeticExpressionCompiler.zip?raw=true&#xa;n:=20&#xa;i:=0&#xa;While i&lt;n | i=n&#xa;&#x9;If i=0&#xa;&#x9;&#x9;fib(i):=0&#xa;&#x9;ElseIf i=1&#xa;&#x9;&#x9;fib(i):=1&#xa;&#x9;Else&#xa;&#x9;&#x9;fib(i):=fib(i-1)+fib(i-2)&#xa;&#x9;EndIf&#xa;&#x9;i:=i+1&#xa;EndWhile&#xa;fib(n) ;Store the n-th Fibonacci number into &quot;result&quot;.&#xa;;If you now click &quot;Convert AEC to Assembly&quot;, you should get&#xa;;an Assembly code that fills the first 20 fields of the array&#xa;;named &quot;fib&quot; with the respective Fibonacci numbers. And you should&#xa;;be able to compile that code by embedding it into a program&#xa;;that can be compiled with FlatAssembler (and, of course, declaring&#xa;;the variables and the array in Assembly).&#xa;;An example of such a FlatAssembler program is available here:&#xa;;https://flatassembler.github.io/test.ASM"/>
-            <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
