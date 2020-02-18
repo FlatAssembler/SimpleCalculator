@@ -1,12 +1,18 @@
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
+import javax.swing.Action;
+import javax.swing.ActionMap;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.filechooser.FileFilter;
@@ -182,6 +188,36 @@ public class ArithmeticExpressionCompiler extends javax.swing.JFrame {
     }
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
+        JPopupMenu popup1=new JPopupMenu("First Popup Menu");
+        jTextArea1.setComponentPopupMenu(popup1);
+        ActionMap am=jTextArea1.getActionMap();
+        Action cut=am.get("cut-to-clipboard");
+        cut.putValue(Action.NAME, "Cut");
+        popup1.add(cut);
+        Action copy=am.get("copy-to-clipboard");
+        copy.putValue(Action.NAME, "Copy");
+        popup1.add(copy);
+        Action paste=am.get("paste-from-clipboard");
+        paste.putValue(Action.NAME, "Paste");
+        popup1.add(paste);
+        jTextArea2.setComponentPopupMenu(popup1);
+        JMenuItem selectAll1=new JMenuItem();
+        selectAll1.setText("Select All");
+        selectAll1.setActionCommand("Select All of AEC");
+        selectAll1.addActionListener(new KlasaZaEvente());
+        popup1.add(selectAll1);
+        JMenuItem selectAll2=new JMenuItem();
+        selectAll2.setText("Select All");
+        selectAll2.setActionCommand("Select All of Assembly");
+        selectAll2.addActionListener(new KlasaZaEvente());
+        JPopupMenu popup2=new JPopupMenu("Second Popup Menu");
+        jTextArea2.setComponentPopupMenu(popup2);
+        am=jTextArea2.getActionMap();
+        copy=am.get("copy-to-clipboard");
+        copy.putValue(Action.NAME, "Copy");
+        popup2.add(copy);
+        popup2.add(selectAll2);
+        jTextArea2.setComponentPopupMenu(popup2);
         this.setBounds(0,0,640, 480);
         jTextArea1.select(0, 0);
         ctx=Context.enter();
@@ -285,6 +321,18 @@ public class ArithmeticExpressionCompiler extends javax.swing.JFrame {
                 new ArithmeticExpressionCompiler().setVisible(true);
             }
         });
+    }
+    private class KlasaZaEvente implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+         String command = e.getActionCommand();  
+         
+         if( command.equals( "Select All of AEC" ))  {
+            jTextArea1.selectAll();
+         } else if( command.equals( "Select All of Assembly" ) )  {
+            jTextArea2.selectAll();  	
+      }
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
