@@ -1,6 +1,9 @@
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.Action;
 import javax.swing.ActionMap;
+import javax.swing.JMenuItem;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -76,6 +79,11 @@ public class ShowTheLicense extends javax.swing.JFrame {
         Action copy=am.get("copy-to-clipboard");
         copy.putValue(Action.NAME, "Copy");
         jPopupMenu1.add(copy);
+        jTextArea1.select(0, 0);
+        JMenuItem selectAll=new JMenuItem();
+        selectAll.setText("Select All");
+        selectAll.addActionListener(new KlasaZaDogadaje());
+        jPopupMenu1.add(selectAll);
     }//GEN-LAST:event_formWindowOpened
 
     /**
@@ -112,7 +120,11 @@ public class ShowTheLicense extends javax.swing.JFrame {
             }
         });
     }
-
+    private class KlasaZaDogadaje implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            jTextArea1.selectAll();
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
