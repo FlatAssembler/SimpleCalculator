@@ -7,8 +7,8 @@
 	ArithmeticExpressionCompiler and SimpleCalculator are available
 	at these URLs:
 	https://github.com/FlatAssembler
-	https://flatassembler.000webhostapp.com/calculator.html
-	https://flatassembler.000webhostapp.com/compiler.html
+	https://flatassembler.github.io/calculator.html
+	https://flatassembler.github.io/compiler.html
 	All of those programs are made by Teo Samaržija, and they are 
 	open source.
 */
